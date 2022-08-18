@@ -17,7 +17,7 @@ export class Logger {
     }
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    debug(...args: unknown[]): void {
+    debug(...args: any[]): void {
         if (this.enabled) {
             // eslint-disable-next-line no-console
             if (typeof window !== 'undefined' && window.console && typeof console.debug === 'function') {
@@ -34,7 +34,7 @@ export class Logger {
     }
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    info(...args: unknown[]): void {
+    info(...args: any[]): void {
         if (this.enabled) {
             // eslint-disable-next-line no-console
             if (typeof window !== 'undefined' && window.console && typeof console.info === 'function') {
@@ -45,7 +45,7 @@ export class Logger {
     }
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    warn(...args: unknown[]): void {
+    warn(...args: any[]): void {
         if (this.enabled) {
             // eslint-disable-next-line no-console
             if (typeof window !== 'undefined' && window.console && typeof console.warn === 'function') {
@@ -58,7 +58,7 @@ export class Logger {
     }
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    error(...args: unknown[]): void {
+    error(...args: any[]): void {
         if (this.enabled) {
             // eslint-disable-next-line no-console
             if (typeof window !== 'undefined' && window.console && typeof console.error === 'function') {
