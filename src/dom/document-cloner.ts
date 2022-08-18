@@ -525,7 +525,7 @@ const imageReady = (img: HTMLImageElement): Promise<Event | void | string> => {
     });
 };
 
-const imagesReady = (document: HTMLDocument): Promise<unknown[]> => {
+const imagesReady = (document: HTMLDocument): Promise<any[]> => {
     return Promise.all([].slice.call(document.images, 0).map(imageReady));
 };
 
